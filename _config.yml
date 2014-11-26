@@ -5,8 +5,8 @@ relative_permalinks: true
 # Setup
 title:            Peter Whittaker
 tagline:          Information security and identity management consultant, product manager, writer, actor.
-url:              http://peter-whittaker.com
-shorturl:         peter-whittaker.com
+url:              http://peterwhittaker.github.io
+shorturl:         peterwhittaker.github.io
 #url:              http://peter-whittaker.com
 #shorturl:         peter-whittaker.com
 paginate:         1
@@ -15,6 +15,12 @@ author:
   name:           Peter Whittaker
   url:            https://twitter.com/EdgeKeep
 
+
+pages_list:       
+  About: '/about'
+  Archive: '/archive'
+  Feed: '/atom.xml'
+k
 # Custom vars
 version:          1.0.0
 github:
