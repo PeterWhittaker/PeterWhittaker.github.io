@@ -98,7 +98,7 @@ Hyde has hyde.css, the googleapis
 Different icons, etc.
 Hyde has sidebar poop
 
-404 is auto-generated, yes?
+404 is auto-generated, yes? No: There are 404s at the top of each hierarchy, they are identical. The generated 404 differs only in templating applied everywhere.
 
 9) CNAME
 
