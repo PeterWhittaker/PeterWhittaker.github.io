@@ -1,0 +1,137 @@
+Currently at #1: Plan is to merge best of three files into Peter's file. Good thing I have git, eh?
+
+Legend:
+I	Ignore
+D	Done
+T	To do
+?	Still working on it
+P	Plan/Progress, but we shall see: A change is proposed, may break everything.
+
+I   -   Only in PeterWhittaker.github.io/: .git
+D   9   Only in hyde-master/: CNAME
+I   -   Files hyde-master/README.md and PeterWhittaker.github.io/README.md differ
+P   1   Files hyde-master/_config.yml and PeterWhittaker.github.io/_config.yml differ
+    2   Files hyde-master/_includes/head.html and PeterWhittaker.github.io/_includes/head.html differ
+    3   Only in hyde-master/_includes: sidebar.html
+    4   Files hyde-master/_layouts/default.html and PeterWhittaker.github.io/_layouts/default.html differ
+    5   Files hyde-master/_layouts/page.html and PeterWhittaker.github.io/_layouts/page.html differ
+    6   Files hyde-master/_layouts/post.html and PeterWhittaker.github.io/_layouts/post.html differ
+    -   Only in hyde-master/_posts: 2012-02-06-whats-jekyll.md
+    -   Only in hyde-master/_posts: 2012-02-07-example-content.md
+    -   Only in hyde-master/_posts: 2013-12-28-introducing-hyde.md
+    7   Only in hyde-master/_site: 2012
+    7   Only in hyde-master/_site: 2013
+    8   Files hyde-master/_site/404.html and PeterWhittaker.github.io/_site/404.html differ
+    9   Only in hyde-master/_site: CNAME
+    -   Files hyde-master/_site/README.md and PeterWhittaker.github.io/_site/README.md differ
+    10  Files hyde-master/_site/about/index.html and PeterWhittaker.github.io/_site/about/index.html differ
+    11  Files hyde-master/_site/atom.xml and PeterWhittaker.github.io/_site/atom.xml differ
+    12  Files hyde-master/_site/index.html and PeterWhittaker.github.io/_site/index.html differ
+    -   Only in hyde-master/_site/public: apple-touch-icon-144-precomposed.png
+    -   Only in PeterWhittaker.github.io/_site/public: apple-touch-icon-precomposed.png
+    -   Only in hyde-master/_site/public/css: hyde.css
+    -   Files hyde-master/_site/public/favicon.ico and PeterWhittaker.github.io/_site/public/favicon.ico differ
+    -   Files hyde-master/about.md and PeterWhittaker.github.io/about.md differ
+    13  Files hyde-master/atom.xml and PeterWhittaker.github.io/atom.xml differ
+    14  Files hyde-master/index.html and PeterWhittaker.github.io/index.html differ
+    -   Only in hyde-master/public: apple-touch-icon-144-precomposed.png
+    -   Only in PeterWhittaker.github.io/public: apple-touch-icon-precomposed.png
+    -   Only in hyde-master/public/css: hyde.css
+    -   Files hyde-master/public/favicon.ico and PeterWhittaker.github.io/public/favicon.ico differ
+
+DO THE THREE -> lines NEXT
+
+NOTES
+
+1)  _config.yml
+
+tagline and description could/should be quoted
+no description of Peter Whittaker, just a tagline
+version numbers are different (Peter 1.0.0, Hyde 2.1.0)
+paginate in Hyde probably better (5 instead of 1)
+Hyde has dependencies (markdown, redcarpet)
+
+Thinking of removing Custom vars and dependencies completely, seeing what breaks. Likely to use Paginate of 1 (seems more sensible now I've poked about - one post per page). Will quote, add a description.
+
+2) _includes/head.html
+
+Hyde has more expansive http-equiv for utf-8; also has x-ua-compatible, ie=edge
+Hyde has hyde.css (duh) and a googleapi stylesheet
+The icons are different (H for Hyde Vs P for Poole)
+
+3) _includes/sidebar.html
+
+The whole reason we are here.
+Basic template to automagically apply sidebar; pages that should have a sidebar should have "layout: page" in the front-matter (see Hyde README)
+Uses sticky sidebar (see hyde.css)
+See the README.md for use of class in body to specify theme
+
+4) _layouts/default.html
+
+Hyde has more expansive <html... - not surprising, see more expansive head.html
+Hyde has DOCTYPE
+Hyde includes sidebar (duh)
+Hyde specifies content and container classes in opposite order
+Peter has more expansive content specification
+Peter has footer, copyright, time, a lot of cool autogeneration stuff
+
+5) _layouts/page.html
+
+Hyde uses <div..., Peter uses <article... - otherwise the same
+
+6) _layouts/post.html
+
+Hyde uses <div..., Peter uses <article...
+Hyde uses <div..., Peter uses <aside...
+Peter uses more expansive specification, more bling, to set time of posts
+Peter adds the baseurl to the posturl
+SO article (http://stackoverflow.com/questions/4781077/html5-best-practices-section-header-aside-article-tags) has interesting commentary on aside, article, etc. Hmm....
+
+7) date-based directories
+
+Generated from post dates
+
+8) _site/404.html
+
+Hyde has more expansive <html, <http-equiv... (see above)
+Hyde has hyde.css, the googleapis
+Different icons, etc.
+Hyde has sidebar poop
+
+404 is auto-generated, yes?
+
+9) CNAME
+
+Why is it there?
+
+No idea, not referenced by any files. Should/could it be deleted?
+Ah ha! According to http://www.smashingmagazine.com/2014/08/01/build-blog-jekyll-github-pages/, this is required if you use a custom domain name. I can easily delete it from my copy of Hyde.
+
+10) _site/about/index.html
+
+Autogenerated from about.md, correct?
+Hyde contains usual more expansive stuff
+Hyde uses rss-xml, Peter uses atom-xml
+Hyde contains the sidebar, etc.
+
+11) _site/atom.xml
+
+Hyde contains a ton more stuff, not sure how that got included
+WAIT! See 13, below. Peter has no posts, therefore atom is just title, etc.,
+but Hyde has pages marked as posts, therefore atom.xml contains all post content.
+
+12) _site/index.html
+
+Not surprising these would differ, these are built using index.html, defaults, etc.12) _site/index.html
+
+13) atom.xml
+
+Hyde doesn't use baseurl
+Basic structure is main part (title, followed by posts)
+Baseurl must not be set in Peter, because generated files (see 11) do not differ in basic URL structure (where it exists: title, etc.)
+
+14) index.html
+
+See 6, etc.
+Hyde uses <div..., Peter uses <article...
+Peter uses more expansive specification, more bling, to set time of posts
