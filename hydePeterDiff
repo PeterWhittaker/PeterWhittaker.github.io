@@ -6,38 +6,40 @@ D	Done
 T	To do
 ?	Still working on it
 P	Plan/Progress, but we shall see: A change is proposed, may break everything.
+U	Use this file as is (at least for now)
+A	Auto-generated: Ignore, will be set by other files.
 
 I   -   Only in PeterWhittaker.github.io/: .git
 D   9   Only in hyde-master/: CNAME
-I   -   Files hyde-master/README.md and PeterWhittaker.github.io/README.md differ
-P   1   Files hyde-master/_config.yml and PeterWhittaker.github.io/_config.yml differ
-    2   Files hyde-master/_includes/head.html and PeterWhittaker.github.io/_includes/head.html differ
-    3   Only in hyde-master/_includes: sidebar.html
-    4   Files hyde-master/_layouts/default.html and PeterWhittaker.github.io/_layouts/default.html differ
-    5   Files hyde-master/_layouts/page.html and PeterWhittaker.github.io/_layouts/page.html differ
-    6   Files hyde-master/_layouts/post.html and PeterWhittaker.github.io/_layouts/post.html differ
-    -   Only in hyde-master/_posts: 2012-02-06-whats-jekyll.md
-    -   Only in hyde-master/_posts: 2012-02-07-example-content.md
-    -   Only in hyde-master/_posts: 2013-12-28-introducing-hyde.md
-    7   Only in hyde-master/_site: 2012
-    7   Only in hyde-master/_site: 2013
-    8   Files hyde-master/_site/404.html and PeterWhittaker.github.io/_site/404.html differ
-    9   Only in hyde-master/_site: CNAME
-    -   Files hyde-master/_site/README.md and PeterWhittaker.github.io/_site/README.md differ
-    10  Files hyde-master/_site/about/index.html and PeterWhittaker.github.io/_site/about/index.html differ
-    11  Files hyde-master/_site/atom.xml and PeterWhittaker.github.io/_site/atom.xml differ
-    12  Files hyde-master/_site/index.html and PeterWhittaker.github.io/_site/index.html differ
-    -   Only in hyde-master/_site/public: apple-touch-icon-144-precomposed.png
-    -   Only in PeterWhittaker.github.io/_site/public: apple-touch-icon-precomposed.png
-    -   Only in hyde-master/_site/public/css: hyde.css
-    -   Files hyde-master/_site/public/favicon.ico and PeterWhittaker.github.io/_site/public/favicon.ico differ
-    -   Files hyde-master/about.md and PeterWhittaker.github.io/about.md differ
-    13  Files hyde-master/atom.xml and PeterWhittaker.github.io/atom.xml differ
-    14  Files hyde-master/index.html and PeterWhittaker.github.io/index.html differ
-    -   Only in hyde-master/public: apple-touch-icon-144-precomposed.png
-    -   Only in PeterWhittaker.github.io/public: apple-touch-icon-precomposed.png
-    -   Only in hyde-master/public/css: hyde.css
-    -   Files hyde-master/public/favicon.ico and PeterWhittaker.github.io/public/favicon.ico differ
+I   -   hyde-master/README.md and PeterWhittaker.github.io/README.md differ
+P   1   hyde-master/_config.yml and PeterWhittaker.github.io/_config.yml differ
+P   2   hyde-master/_includes/head.html and PeterWhittaker.github.io/_includes/head.html differ
+P   3   Only in hyde-master/_includes: sidebar.html
+P   4   hyde-master/_layouts/default.html and PeterWhittaker.github.io/_layouts/default.html differ
+P   5   hyde-master/_layouts/page.html and PeterWhittaker.github.io/_layouts/page.html differ
+P   6   hyde-master/_layouts/post.html and PeterWhittaker.github.io/_layouts/post.html differ
+I   -   Only in hyde-master/_posts: 2012-02-06-whats-jekyll.md
+I   -   Only in hyde-master/_posts: 2012-02-07-example-content.md
+I   -   Only in hyde-master/_posts: 2013-12-28-introducing-hyde.md
+A   7   Only in hyde-master/_site: 2012
+A   7   Only in hyde-master/_site: 2013
+P   8   hyde-master/_site/404.html and PeterWhittaker.github.io/_site/404.html differ
+P   9   Only in hyde-master/_site: CNAME
+A   -   hyde-master/_site/README.md and PeterWhittaker.github.io/_site/README.md differ
+A   10  hyde-master/_site/about/index.html and PeterWhittaker.github.io/_site/about/index.html differ
+A   11  hyde-master/_site/atom.xml and PeterWhittaker.github.io/_site/atom.xml differ
+A   12  hyde-master/_site/index.html and PeterWhittaker.github.io/_site/index.html differ
+A   -   Only in hyde-master/_site/public: apple-touch-icon-144-precomposed.png
+A   -   Only in PeterWhittaker.github.io/_site/public: apple-touch-icon-precomposed.png
+A   -   Only in hyde-master/_site/public/css: hyde.css
+A   -   hyde-master/_site/public/favicon.ico and PeterWhittaker.github.io/_site/public/favicon.ico differ
+I   -   hyde-master/about.md and PeterWhittaker.github.io/about.md differ
+P   13  hyde-master/atom.xml and PeterWhittaker.github.io/atom.xml differ
+P   14  hyde-master/index.html and PeterWhittaker.github.io/index.html differ
+I   -   Only in hyde-master/public: apple-touch-icon-144-precomposed.png
+I   -   Only in PeterWhittaker.github.io/public: apple-touch-icon-precomposed.png
+U   -   Only in hyde-master/public/css: hyde.css
+I   -   hyde-master/public/favicon.ico and PeterWhittaker.github.io/public/favicon.ico differ
 
 DO THE THREE -> lines NEXT
 
@@ -51,7 +53,7 @@ version numbers are different (Peter 1.0.0, Hyde 2.1.0)
 paginate in Hyde probably better (5 instead of 1)
 Hyde has dependencies (markdown, redcarpet)
 
-Thinking of removing Custom vars and dependencies completely, seeing what breaks. Likely to use Paginate of 1 (seems more sensible now I've poked about - one post per page). Will quote, add a description.
+Plan: Thinking of removing Custom vars and dependencies completely, seeing what breaks. Likely to use Paginate of 1 (seems more sensible now I've poked about - one post per page). Will quote, add a description.
 
 2) _includes/head.html
 
@@ -59,12 +61,22 @@ Hyde has more expansive http-equiv for utf-8; also has x-ua-compatible, ie=edge
 Hyde has hyde.css (duh) and a googleapi stylesheet
 The icons are different (H for Hyde Vs P for Poole)
 
+Plan:
+	Use the x-ua-compatible, ie=edge - this forces IE to use most recent engine available
+	Retain hyde.css (duh)
+	Use the P icon, since it looks like Peter. Later, get a better one.
+	Keep the Google Fonts (Abril, PT), keep the Hyde.css fonts bits as they are.
+	Looks like I should use 'Content-Type: text/html; charset=utf-8' first, followed by the short meta for utf-8 (articles declare short form equivalent, easier, faster). HMMM OR: utf-8 is the default for HTML5, the doctype is set to HTML (which means HTML5), and the content-type header is new to HTML5: So none of these should be necessary. NEW PLAN: Add a colophon asking people to comment about rendering problems, which I will fix as needed: I'm going to skip all UTF-8 specifications.
+
+
 3) _includes/sidebar.html
 
 The whole reason we are here.
 Basic template to automagically apply sidebar; pages that should have a sidebar should have "layout: page" in the front-matter (see Hyde README)
 Uses sticky sidebar (see hyde.css)
 See the README.md for use of class in body to specify theme
+
+Plan: Include these, obviously, including theme specification.
 
 4) _layouts/default.html
 
@@ -75,9 +87,20 @@ Hyde specifies content and container classes in opposite order
 Peter has more expansive content specification
 Peter has footer, copyright, time, a lot of cool autogeneration stuff
 
+Plan (partial:)
+	Class ordering is irrelevant
+	Refer to 2 for x-ua, UTF-8, doctype, etc. (why is this here when it is there?)
+	Use the sidebar (duh) (refer to "duh" in plan for #2)
+	Remove all xmlns, XHTML references, stick to HTML5
+	Specify <html lang="en">, keep it simple. Use lang in divs, etc., if there is French, e.g.
+	As to the rest, "peter" has much more structure than "Hyde", this is the critical stuff: What do I want it to look like?
+	Refer to plan for 6
+
 5) _layouts/page.html
 
 Hyde uses <div..., Peter uses <article... - otherwise the same
+
+Plan: Align with the overall div Vs article decision;Refer to plan for 6
 
 6) _layouts/post.html
 
@@ -86,6 +109,17 @@ Hyde uses <div..., Peter uses <aside...
 Peter uses more expansive specification, more bling, to set time of posts
 Peter adds the baseurl to the posturl
 SO article (http://stackoverflow.com/questions/4781077/html5-best-practices-section-header-aside-article-tags) has interesting commentary on aside, article, etc. Hmm....
+
+Note:	I created a version of Peter with div instead, did a full diff, got cleaner results; diffs are mostly bling and appearance, once article/div Q is out of the way.
+
+Plan:
+	Decide on article Vs div; leaning to article, etc. Use div as a catch-all, see the SO article
+	Include both the time specifications, test them each, decide which to use
+	Ditto on baseurl
+
+NOTE:	Justin's 7 pt answer in the SO article has a nice layout I might include: A thin nav at the top, with the Hyde sidebar. At that point, I might consider renaming the Hyde.css to the HydeWithNav.css or some such.
+
+QUESTION: How are related posts generated? Are all posts related? CSS gets applied, but how are articles chosen?
 
 7) date-based directories
 
@@ -100,12 +134,15 @@ Hyde has sidebar poop
 
 404 is auto-generated, yes? No: There are 404s at the top of each hierarchy, they are identical. The generated 404 differs only in templating applied everywhere.
 
+Plan: Set the base 404 in the top-level, then accept what gets generated, based on other changes documented herein.
+
 9) CNAME
 
 Why is it there?
 
 No idea, not referenced by any files. Should/could it be deleted?
-Ah ha! According to http://www.smashingmagazine.com/2014/08/01/build-blog-jekyll-github-pages/, this is required if you use a custom domain name. I can easily delete it from my copy of Hyde.
+
+Plan: Ah ha! According to http://www.smashingmagazine.com/2014/08/01/build-blog-jekyll-github-pages/, this is required if you use a custom domain name. I can easily delete it from my copy of Hyde.
 
 10) _site/about/index.html
 
@@ -114,15 +151,21 @@ Hyde contains usual more expansive stuff
 Hyde uses rss-xml, Peter uses atom-xml
 Hyde contains the sidebar, etc.
 
+Ignore: All are autogenerated based on content and controls elsewhere.
+
 11) _site/atom.xml
 
 Hyde contains a ton more stuff, not sure how that got included
 WAIT! See 13, below. Peter has no posts, therefore atom is just title, etc.,
 but Hyde has pages marked as posts, therefore atom.xml contains all post content.
 
+Ignore: All are autogenerated based on content and controls elsewhere.
+
 12) _site/index.html
 
 Not surprising these would differ, these are built using index.html, defaults, etc.12) _site/index.html
+
+Ignore: All are autogenerated based on content and controls elsewhere.
 
 13) atom.xml
 
@@ -130,8 +173,13 @@ Hyde doesn't use baseurl
 Basic structure is main part (title, followed by posts)
 Baseurl must not be set in Peter, because generated files (see 11) do not differ in basic URL structure (where it exists: title, etc.)
 
+PLAN:	Include both the URL  specifications, test them each, decide which to use
+
 14) index.html
 
 See 6, etc.
 Hyde uses <div..., Peter uses <article...
 Peter uses more expansive specification, more bling, to set time of posts
+
+Plan: Refer to 6. Use that plan here as well.
+
