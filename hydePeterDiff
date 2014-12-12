@@ -121,6 +121,8 @@ NOTE:	Justin's 7 pt answer in the SO article has a nice layout I might include: 
 
 QUESTION: How are related posts generated? Are all posts related? CSS gets applied, but how are articles chosen?
 
+TENTATIVE ANSWER: Based on reading between the lines of existing Jekyll documentation, it appears that populating the "tags:" variable in the front matter using a YAML syntax (refer to GettingToGit/*.short) is how "site.related_posts" ends up populated. But this is from reading between the lines; experimentation required.
+
 7) date-based directories
 
 Generated from post dates
