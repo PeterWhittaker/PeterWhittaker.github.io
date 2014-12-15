@@ -3,8 +3,9 @@ permalink:        pretty
 relative_permalinks: true
 
 # Setup
-title:            Peter Whittaker
-tagline:          Information security and identity management consultant, product manager, writer, actor.
+title:            'Peter Whittaker'
+tagline:          'Information security and identity management consultant, product manager, writer, actor.'
+description:      'Principal consultant with <a href="http://www.EdgeKeep.com">EdgeKeep</a>, occasional <a href="http://www.imdb.com/name/nm3945839/">film</a>, <a href="http://kanatatheatre.com/Archive/actors/w/whittpet.htm>theatre</a>, and <a href="">commercial</a> actor, and occasional <a href="https://news.ycombinator.com/user?id=PeterWhittaker">HackerNews commenter</a>.'
 url:              http://peterwhittaker.github.io
 shorturl:         peterwhittaker.github.io
 #url:              http://peter-whittaker.com
@@ -12,16 +13,16 @@ shorturl:         peterwhittaker.github.io
 paginate:         1
 baseurl:          /
 author:
-  name:           Peter Whittaker
+  name:           'Peter Whittaker'
   url:            https://twitter.com/EdgeKeep
 
 
 pages_list:       
   About: '/about'
   Archive: '/archive'
+  Colophon: '/colophon'
   Feed: '/atom.xml'
 
 # Custom vars
-version:          1.0.0
 github:
   repo:           https://github.com/PeterWhittaker/PeterWhittaker.github.io
