@@ -13,6 +13,10 @@ title: Home
     </h1>
 
     <time datetime="{{ post.date | date_to_xmlschema }}" class="post-date">{{ post.date | date_to_string }}</time>
+    <!-- experiment with both time format -->
+<!--
+    <span class="post-date">{{ post.date | date_to_string }}</span>
+-->
 
     {{ post.content }}
   </article>
