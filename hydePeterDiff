@@ -1,4 +1,3 @@
-Currently at #1: Plan is to merge best of three files into Peter's file. Good thing I have git, eh?
 
 Legend:
 I	Ignore
@@ -54,6 +53,8 @@ paginate in Hyde probably better (5 instead of 1)
 Hyde has dependencies (markdown, redcarpet)
 
 Plan: Thinking of removing Custom vars and dependencies completely, seeing what breaks. Likely to use Paginate of 1 (seems more sensible now I've poked about - one post per page). Will quote, add a description.
+
+(Old plan, from marker at top of file: "Currently at #1: Plan is to merge best of three files into Peter's file. Good thing I have git, eh?")
 
 2) _includes/head.html
 
