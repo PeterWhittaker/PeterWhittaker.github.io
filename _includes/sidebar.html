@@ -1,12 +1,12 @@
 <div class="sidebar">
   <div class="container sidebar-sticky">
     <div class="sidebar-about">
-      <h1>
+      <h3>
         <a href="{{ site.baseurl }}">
           {{ site.title }}
         </a>
-      </h1>
-      <p class="lead">{{ site.description }}</p>
+      </h3>
+      <p>{{ site.description }}</p>
     </div>
 
     <nav class="sidebar-nav">
@@ -26,11 +26,19 @@
         {% endif %}
       {% endfor %}
 
+      {% comment %}
+	The custom var "version" is used in the download link for a complete ZIP of the web site.
+	I'm not using that right now and don't yet know how to set a version.
       <a class="sidebar-nav-item" href="{{ site.github.repo }}/archive/v{{ site.version }}.zip">Download</a>
-      <a class="sidebar-nav-item" href="{{ site.github.repo }}">GitHub project</a>
+      {% endcomment %}
+      <a class="sidebar-nav-item" href="{{ site.github.repo }}/archive/master.zip">Download a zip of the site</a>
+      <a class="sidebar-nav-item" href="{{ site.github.repo }}">Site source on GitHub</a>
+      {% comment %}
+	See previous comment.
       <span class="sidebar-nav-item">Currently v{{ site.version }}</span>
+      {% endcomment %}
     </nav>
 
-    <p>&copy; {{ site.time | date: '%Y' }}. All rights reserved.</p>
+    <p><small>&copy; {{ site.time | date: '%Y' }}. Unmodified code under its original license. Original code under <a href="https://www.mozilla.org/MPL/2.0/">MPL 2.0</a>. Modified code under the MPL if permitted, the original license otherwise. Blog posts  under <a href="http://creativecommons.org/licenses/by-nc-sa/2.5/ca/">CC-BY-NC-SA</a>. All other rights reserved. Contact me for more information and for other licensing alternatives.</small></p>
   </div>
 </div>
