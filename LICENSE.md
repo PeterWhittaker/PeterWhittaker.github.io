@@ -35,5 +35,5 @@ All written content (all page and post content, etc.), exclusive of source code,
 
 ## Contributor License Agreement
 
-If you submit either source code or web site content, you warrant that you are authorized to do so, that you will indemnfiy and hold harmless all parties that make use of your submissions, that your submissions are not encumbered by patents or other restrictions in any way. You also agree that your source code contributions are released under the Mozilla Public License Version 2.0 and that your content contributions are released under the Creative Commons Attribution Non-commercial Share-alike license.
+If you submit either source code or web site content, you warrant that you are authorized to do so, that you will indemnfiy and hold harmless all parties that make use of your submissions, and that your submissions are not encumbered by patents or other restrictions in any way. You also agree that your source code contributions are released under the Mozilla Public License Version 2.0 and that your content contributions are released under the Creative Commons Attribution Share-alike license.
 
