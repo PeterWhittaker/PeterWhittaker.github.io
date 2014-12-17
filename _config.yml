@@ -9,7 +9,7 @@ relative_permalinks: true
 # Setup
 title:            'Peter Whittaker'
 tagline:          'Information security and identity management consultant, product manager, writer, actor.'
-description:      'Principal consultant with <a href="http://www.EdgeKeep.com">EdgeKeep</a>, occasional <a href="http://www.imdb.com/name/nm3945839/">film</a>, <a href="http://kanatatheatre.com/Archive/actors/w/whittpet.htm">theatre</a>, and <a href="https://www.youtube.com/watch?v=lDmBQORUCQM">commercial</a> actor, and writer. Learn more on the <a href="/About">About page</a>.'
+description:      'Principal consultant with <a href="http://www.EdgeKeep.com">EdgeKeep</a>, occasional <a href="http://www.imdb.com/name/nm3945839/">film</a>, <a href="http://kanatatheatre.com/Archive/actors/w/whittpet.htm">theatre</a>, and <a href="https://www.youtube.com/watch?v=lDmBQORUCQM">commercial</a> actor, and writer. Learn more on the <a href="/about">About page</a>.'
 url:              http://peterwhittaker.github.io
 shorturl:         peterwhittaker.github.io
 #url:              http://peter-whittaker.com
