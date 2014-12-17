@@ -5,10 +5,10 @@ layout: default
 <article class="post">
   <h1 class="post-title">{{ page.title }}</h1>
   <time datetime="{{ page.date | date_to_xmlschema }}" class="page-date">{{ page.date | date_to_string }}</time>
-  <!-- experiment with both time format -->
-<!--
+{% comment %}
+  experiment with both time format
   <span class="post-date">{{ post.date | date_to_string }}</span>
--->
+{% endcomment %}
 
   {{ content }}
 </article>
@@ -22,10 +22,10 @@ layout: default
           <a href="{{ site.baseurl }}{{ post.url }}">
             {{ post.title }}
             <small><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date_to_string }}</time></small>
-  <!-- experiment with both time format -->
-<!--
+{% comment %}
+  experiment with both time format
             <small>{{ post.date | date_to_string }}</small>
--->
+{% endcomment %}
           </a>
         </h3>
       </li>
