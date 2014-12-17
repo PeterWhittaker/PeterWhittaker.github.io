@@ -24,6 +24,5 @@ For acting, check out
 * My [Kanata Theatre](http://kanatatheatre.com/Archive/actors/w/whittpet.htm) page, or
 * Watch and listen to some of my work on [YouTube](http://www.youtube.com/playlist?list=PL5faqvscfwfocIuqoCFlb_Zn048YFGm4y).
 
-
-
+Occasionally I play stringed instruments of various types, with picks or bows (definitely prefer the ones with bows). Relieved you should be that evidence of that spared you I have.
 
