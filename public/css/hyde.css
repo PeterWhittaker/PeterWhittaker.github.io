@@ -231,6 +231,16 @@ a.sidebar-nav-item:focus {
   color: #6a9fb5;
 }
 
+/* Bluer blue - Peter Whittaker */
+.theme-base-1d .sidebar {
+  background-color: #6699dd;
+}
+.theme-base-1d .content a,
+.theme-base-1d .content h1,
+.theme-base-1d .related-posts li a:hover {
+  color: #6699ff;
+}
+
 /* Magenta */
 .theme-base-0e .sidebar {
   background-color: #aa759f;
