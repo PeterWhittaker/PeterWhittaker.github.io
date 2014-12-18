@@ -1,6 +1,6 @@
 ---
 layout: post
-permalink: short-urls-jekyll
+permalink: ok-now-what
 
 title: OK, now what?
 tags:
