@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  {% include head.html %}
+
+  {% comment %}
+	  Be very careful: CSS class names are case-insensitive, but HTML class names are CaSe-SeNSiTiVe. Sigh.
+	  So "...0D" just doesn't work.
+  {% endcomment %}
+  <body class="theme-base-08">
+
+    <div class="container content">
+
+      <main>
+        {{ content }}
+      </main>
+
+    </div>
+
+  </body>
+</html>

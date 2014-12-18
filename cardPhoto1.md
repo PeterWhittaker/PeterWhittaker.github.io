@@ -1,6 +1,6 @@
 ---
 
-layout: default
+layout: card
 title: Our Christmas Pic, 2014
 
 ---

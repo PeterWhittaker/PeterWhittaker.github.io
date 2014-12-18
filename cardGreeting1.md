@@ -1,6 +1,6 @@
 ---
 
-layout: default
+layout: card
 title: Our 2014 Christmas Card Greeting
 
 ---
