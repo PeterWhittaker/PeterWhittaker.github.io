@@ -12,7 +12,6 @@
  * 
  */
 
-
 /* pww TK - ToDo - update contents */
 /*
  * Contents
@@ -31,9 +30,18 @@
  * Update the foundational and global aspects of the page.
  */
 
+/* Set default font size and font family */
 html {
     font-family: "PT Sans", Helvetica, Arial, sans-serif;
     font-size: 16px;
+}
+
+/*
+   Add a class for pagination above content, removing the top margin
+   Better use of whitespace, IMHO
+*/
+.pagination-item-above-content {
+    margin-top: 0rem;
 }
 
 /*
@@ -233,11 +241,6 @@ a.sidebar-nav-item:focus {
 	      transition: all .3s ease-in-out;
     }
 
-/* Likely to remove
-    .sidebar-item p:last-child {
-      margin-bottom: 0;
-    }
-*/
     /* Hide the sidebar checkbox that we toggle with `.sidebar-toggle` */
     .sidebar-checkbox {
       display: none;
