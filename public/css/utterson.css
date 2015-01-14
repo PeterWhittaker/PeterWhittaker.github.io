@@ -1,0 +1,542 @@
+/*
+ *
+ * Utterson - based on @mdo's Hyde and Lanyon, which were:
+ * 
+	 * Designed, built, and released under MIT license by @mdo. Learn more at
+         *     https://github.com/poole/hyde
+         * and
+	 *     https://github.com/poole/lanyon.
+ *
+ * Utterson was kludged together by @PeterWhittaker (aka @EdgeKeep on twitter).
+ * Learn more at https://github.com/PeterWhittaker
+ * 
+ */
+
+
+/* pww TK update contents */
+/*
+ * Contents
+ *
+ * Global resets
+ * Sidebar
+ * Container
+ * Reverse layout
+ * Themes
+ */
+
+
+/*
+ * Global resets
+ *
+ * Update the foundational and global aspects of the page.
+ */
+
+html {
+    font-family: "PT Sans", Helvetica, Arial, sans-serif;
+    font-size: 16px;
+}
+
+/*
+ * Sidebar
+ *
+ * Flexible banner for housing site name, intro, and "footer" content. Starts
+ * out above content in mobile and later moves to the side with wider viewports.
+ */
+
+.sidebar {
+    font-family: "PT Sans", Helvetica, Arial, sans-serif;
+    /* font-size: .875rem; /* 15px */
+    /* hack to fix the focus issue - see issue #39.*/
+    z-index: 5;
+    padding: 2rem 1rem;
+/* TK move color to theme, eventually */
+    color: rgba(255,255,255,.5);
+}
+
+@media (min-width: 48em) {
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 18rem;
+  }
+}
+
+.sidebar p {
+    opacity: 0.5;
+}
+
+/* Sidebar links */
+.sidebar a {
+    opacity 1.0;
+  color: #fff;
+}
+
+.sidebar p > a {
+    opacity 1.0;
+  color: #fff;
+}
+
+/* Sidebar nav */
+.sidebar-nav {
+  margin-bottom: 1rem;
+}
+.sidebar-nav-item {
+  display: block;
+  line-height: 1.75;
+}
+a.sidebar-nav-item:hover,
+a.sidebar-nav-item:focus {
+  text-decoration: underline;
+}
+.sidebar-nav-item.active {
+  font-weight: bold;
+}
+
+/* Sticky sidebar
+ *
+ * Add the `sidebar-sticky` class to the sidebar's container to affix it the
+ * contents to the bottom of the sidebar in tablets and up.
+ */
+
+/*
+@media (min-width: 48em) {
+  .sidebar-sticky {
+    position: absolute;
+    right:  1rem;
+    bottom: 1rem;
+    left:   1rem;
+  }
+}
+*/
+
+/* Container
+ *
+ * Align the contents of the site above the proper threshold with some margin-fu
+ * with a 25%-wide `.sidebar`.
+ */
+
+.content {
+  padding-top:    4rem;
+  padding-bottom: 4rem;
+}
+
+@media (min-width: 48em) {
+  .content {
+    max-width: 38rem;
+    margin-left: 20rem;
+    margin-right: 2rem;
+  }
+}
+
+@media (min-width: 64em) {
+  .content {
+    margin-left: 22rem;
+    margin-right: 4rem;
+  }
+}
+
+/*
+ *
+ * Wrapper
+ *
+ * The wrapper is used to position site content when the sidebar is toggled. We
+ * use an outter wrap to position the sidebar without interferring with the
+ * regular page content.
+ *
+ */
+
+.wrap {
+  position: relative;
+  width: 100%;
+}
+
+/*
+ *
+ * Container
+ *
+ * Center the page content.
+ *
+ */
+
+/*
+ *
+ * This may be relevant only when showing the sidebar - which
+ * will happen on a smaller screen (see below), so it may be
+ * best to remove part of this, and wrap the rest in the max-width
+ * block, below.
+ *
+ */
+
+.container {
+  max-width: 28rem;
+}
+@media (min-width: 38em) {
+  .container {
+    max-width: 32rem;
+  }
+}
+@media (min-width: 56em) {
+  .container {
+    max-width: 38rem;
+  }
+}
+
+/*
+ *
+ * Make the sidebar disappear only on smaller screens. The plan is to
+ * a) wrap the entire sidebar part in the following block,
+ * b) hide the button if the screen is larger (so do that first),
+ *    and override it in the max-width block, and
+ * c) if possible, not load the javascript at all on larger screens
+ *    (that can wait; it's a tiny amount of code, so
+ *    hiding the activation button will be sufficient
+ *    for now; later, get community feedback on this).
+ *
+ */
+
+/*
+ *
+ * Copy button hiding code from below to here, make hiding the button the default, then
+ * override the default for smaller screens in the max-width block
+ *
+ */
+
+@media (max-width: 48em) {
+
+    /*
+     * Sidebar
+     *
+     * The sidebar is the drawer, the item we are toggling with our handy hamburger
+     * button in the corner of the page.
+     * On smaller screens, the sidebar will start hidden; on larger screens, the
+     * sidebar will start displayed (toggling it may in fact be turned off on larger
+     * screens, this is TBD).
+     *
+     */ 
+
+    /* Style and "hide" the sidebar */
+    .sidebar {
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      left: -14rem;
+      width: 14rem;
+      visibility: hidden;
+      overflow-y: auto;
+      -webkit-transition: all .3s ease-in-out;
+	      transition: all .3s ease-in-out;
+    }
+
+/* Likely to remove
+    .sidebar-item p:last-child {
+      margin-bottom: 0;
+    }
+*/
+    /* Hide the sidebar checkbox that we toggle with `.sidebar-toggle` */
+    .sidebar-checkbox {
+      display: none;
+    }
+
+    /* Style the `label` that we use to target the `.sidebar-checkbox` */
+    .sidebar-toggle {
+      position: absolute;
+      top:  1rem;
+      left: 1rem;
+      display: block;
+      width: 2.2rem;
+      padding: .5rem .65rem;
+      color: #505050;
+      background-color: #fff;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    .sidebar-toggle:before {
+      display: block;
+      content: "";
+      width: 100%;
+      padding-bottom: .125rem;
+      border-top: .375rem double;
+      border-bottom: .125rem solid;
+
+      /* Make the border inside the box */
+      -webkit-box-sizing: border-box;
+	 -moz-box-sizing: border-box;
+	      box-sizing: border-box;
+    }
+
+    .sidebar-toggle:active,
+    #sidebar-checkbox:checked ~ .sidebar-toggle {
+      color: #fff;
+      background-color: #505050;
+    }
+
+/* TK likely to delete
+    @media (min-width: 30.1em) {
+      .sidebar-toggle {
+	position: fixed;
+	width: 2.25rem;
+      }
+      .sidebar-toggle:before {
+	padding-bottom: .15rem;
+	border-top-width: .45rem;
+	border-bottom-width: .15rem;
+      }
+    }
+*/
+
+    /* Slide effect
+     *
+     * Handle the sliding effects of the sidebar and content in one spot, seperate
+     * from the default styles.
+     *
+     * As an a heads up, we don't use `transform: translate3d()` here because when
+     * mixed with `position: fixed;` for the sidebar toggle, it creates a new
+     * containing block. Put simply, the fixed sidebar toggle behaves like
+     * `position: absolute;` when transformed.
+     *
+     * Read more about it at http://meyerweb.com/eric/thoughts/2011/09/12/.
+     */
+
+    .wrap,
+    .sidebar,
+    .sidebar-toggle {
+      -webkit-backface-visibility: hidden;
+	  -ms-backface-visibility: hidden;
+	      backface-visibility: hidden;
+    }
+    .wrap,
+    .sidebar-toggle {
+      -webkit-transition: -webkit-transform .3s ease-in-out;
+	      transition: transform .3s ease-in-out;
+    }
+
+    #sidebar-checkbox:checked + .sidebar {
+      z-index: 10;
+      visibility: visible;
+    }
+    #sidebar-checkbox:checked ~ .sidebar,
+    #sidebar-checkbox:checked ~ .wrap,
+    #sidebar-checkbox:checked ~ .sidebar-toggle {
+      -webkit-transform: translateX(14rem);
+	  -ms-transform: translateX(14rem);
+	      transform: translateX(14rem);
+    }
+
+
+    /*
+     * Reverse layout
+     *
+     * Flip the orientation of the page by placing the `.sidebar` and sidebar toggle
+     * on the right side.
+     */
+
+    .layout-reverse .sidebar {
+      left: auto;
+      right: -14rem;
+    }
+    .layout-reverse .sidebar-toggle {
+      left: auto;
+      right: 1rem;
+    }
+
+    .layout-reverse #sidebar-checkbox:checked ~ .sidebar,
+    .layout-reverse #sidebar-checkbox:checked ~ .wrap,
+    .layout-reverse #sidebar-checkbox:checked ~ .sidebar-toggle {
+      -webkit-transform: translateX(-14rem);
+	  -ms-transform: translateX(-14rem);
+	      transform: translateX(-14rem);
+    }
+
+
+    /*
+     * Overlay sidebar
+     *
+     * Make the sidebar content overlay the viewport content instead of pushing it
+     * aside when toggled.
+     */
+
+    .sidebar-overlay #sidebar-checkbox:checked ~ .wrap {
+      -webkit-transform: translateX(0);
+	  -ms-transform: translateX(0);
+	      transform: translateX(0);
+    }
+    .sidebar-overlay #sidebar-checkbox:checked ~ .sidebar-toggle {
+      box-shadow: 0 0 0 .25rem #fff;
+    }
+    .sidebar-overlay #sidebar-checkbox:checked ~ .sidebar {
+      box-shadow: .25rem 0 .5rem rgba(0,0,0,.1);
+    }
+
+    /* Only one tweak for a reverse layout */
+    .layout-reverse.sidebar-overlay #sidebar-checkbox:checked ~ .sidebar {
+      box-shadow: -.25rem 0 .5rem rgba(0,0,0,.1);
+    }
+
+
+}
+
+
+/*
+ * Reverse layout
+ *
+ * Flip the orientation of the page by placing the `.sidebar` on the right.
+ */
+
+@media (min-width: 48em) {
+  .layout-reverse .sidebar {
+    left: auto;
+    right: 0;
+  }
+  .layout-reverse .content {
+    margin-left: 2rem;
+    margin-right: 20rem;
+  }
+}
+
+@media (min-width: 64em) {
+  .layout-reverse .content {
+    margin-left: 4rem;
+    margin-right: 22rem;
+  }
+}
+
+
+/*
+ * Themes
+ *
+ * As of v1.1, Hyde includes optional themes to color the sidebar and links
+ * within blog posts. To use, add the class of your choosing to the `body`.
+ */
+
+/* Base16 (http://chriskempson.github.io/base16/#default) */
+
+
+/* Red */
+.theme-base-08 .sidebar {
+  background-color: #ac4142;
+  color: black;
+}
+/* pww 2014-12-17 - moved from poole.css to each theme */
+.theme-base-08 .page-title, .post-title,
+.theme-base-08 h1, h2, h3, h4, h5, h6,
+.theme-base-08 .content a,
+.theme-base-08 .related h2, h3,
+.theme-base-08 .related-posts li a:hover {
+  color: #ac4142;
+}
+
+/* Orange */
+.theme-base-09 .sidebar {
+  background-color: #d28445;
+  color: black;
+}
+/* pww 2014-12-17 - moved from poole.css to each theme */
+.theme-base-09 .page-title, .post-title,
+.theme-base-09 h1, h2, h3, h4, h5, h6,
+.theme-base-09 .content a,
+.theme-base-09 .related h2, h3,
+.theme-base-09 .related-posts li a:hover {
+  color: #d28445;
+}
+
+/* Yellow */
+.theme-base-0a .sidebar {
+  background-color: #f4bf75;
+  color: black;
+}
+/* pww 2014-12-17 - moved from poole.css to each theme */
+.theme-base-0a .page-title, .post-title,
+.theme-base-0a h1, h2, h3, h4, h5, h6,
+.theme-base-0a .content a,
+.theme-base-0a .related h2, h3,
+.theme-base-0a .related-posts li a:hover {
+  color: #f4bf75;
+}
+
+/* Green */
+.theme-base-0b .sidebar {
+  background-color: #90a959;
+  color: white;
+}
+/* pww 2014-12-17 - moved from poole.css to each theme */
+.theme-base-0b .page-title, .post-title,
+.theme-base-0b h1, h2, h3, h4, h5, h6,
+.theme-base-0b .content a,
+.theme-base-0b .related h2, h3,
+.theme-base-0b .related-posts li a:hover {
+  color: #90a959;
+}
+
+/* Cyan */
+.theme-base-0c .sidebar {
+  background-color: #75b5aa;
+  color: white;
+}
+/* pww 2014-12-17 - moved from poole.css to each theme */
+.theme-base-0c .page-title, .post-title,
+.theme-base-0c h1, h2, h3, h4, h5, h6,
+.theme-base-0c .content a,
+.theme-base-0c .related h2, h3,
+.theme-base-0c .related-posts li a:hover {
+  color: #75b5aa;
+}
+
+/* Blue */
+.theme-base-0d .sidebar {
+  background-color: #6a9fb5;
+  color: white;
+}
+/* pww 2014-12-17 - moved from poole.css to each theme */
+.theme-base-0d .page-title, .post-title,
+.theme-base-0d h1, h2, h3, h4, h5, h6,
+.theme-base-0d .content a,
+.theme-base-0d .related h2, h3,
+.theme-base-0d .related-posts li a:hover {
+  color: #6a9fb5;
+}
+
+/* Bluer blue - Peter Whittaker */
+.theme-base-1d .sidebar {
+/* lesser blue in sidebar */
+  background-color: #6699dd;
+  color: white;
+}
+/* pww 2014-12-17 - moved from poole.css to each theme */
+.theme-base-1d .page-title, .post-title,
+.theme-base-1d h1, h2, h3, h4, h5, h6,
+.theme-base-1d .content a,
+.theme-base-1d .related h2, h3,
+.theme-base-1d .related-posts li a:hover {
+/* stronger blue in headings */
+  color: #6699ff;
+}
+
+/* Magenta */
+.theme-base-0e .sidebar {
+  background-color: #aa759f;
+  color: white;
+}
+/* pww 2014-12-17 - moved from poole.css to each theme */
+.theme-base-0e .page-title, .post-title,
+.theme-base-0e h1, h2, h3, h4, h5, h6,
+.theme-base-0e .content a,
+.theme-base-0e .related h2, h3,
+.theme-base-0e .related-posts li a:hover {
+  color: #aa759f;
+}
+
+/* Brown */
+.theme-base-0f .sidebar {
+  background-color: #8f5536;
+  color: white;
+}
+/* pww 2014-12-17 - moved from poole.css to each theme */
+.theme-base-0f .page-title, .post-title,
+.theme-base-0f h1, h2, h3, h4, h5, h6,
+.theme-base-0f .content a,
+.theme-base-0f .related h2, h3,
+.theme-base-0f .related-posts li a:hover {
+  color: #8f5536;
+}
