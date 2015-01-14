@@ -3,7 +3,7 @@ layout: page
 title: About
 ---
 
-Professionally, I work with [EdgeKeep Inc.](http://www.edgekeep.com). We specialize in information security governance, policy, management, and compliance assessments; in identity and access management; and in product management, especially in the information security space.
+Professionally, I work with [EdgeKeep Inc.](http://www.edgekeep.com). We specialize in information security governance, policy, management, and compliance assessments; in identity and access management; and in product management, especially in the information security and identity and access management spaces.
 
 Socially, you can find me on
 
