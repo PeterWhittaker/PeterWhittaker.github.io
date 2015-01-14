@@ -4,8 +4,25 @@
   {% include head.html %}
 
   {% comment %}
-	  Be very careful: CSS class names are case-insensitive, but HTML class names are CaSe-SeNSiTiVe. Sigh.
-	  So "...1D" just doesn't work.
+    Be very careful: CSS class names are case-insensitive, but HTML class names
+    are CaSe-SeNSiTiVe. Sigh. So "...1D" just doesn't work.
+
+    At least, that was my experience. According to the docs and standards,
+    case should matter nowhere - but change 1d to 1D below, and BAM! no more
+    sidebar....
+  {% endcomment %}
+
+  {% comment %}
+    For testing various themes.... ...1d is my default
+  <body class="theme-base-08">
+  <body class="theme-base-09">
+  <body class="theme-base-0a">
+  <body class="theme-base-0b">
+  <body class="theme-base-0c">
+  <body class="theme-base-0d">
+  <body class="theme-base-1d">
+  <body class="theme-base-0e">
+  <body class="theme-base-0f">
   {% endcomment %}
   <body class="theme-base-1d">
 
