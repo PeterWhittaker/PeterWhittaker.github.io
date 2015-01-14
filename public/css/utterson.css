@@ -13,7 +13,7 @@
  */
 
 
-/* pww TK update contents */
+/* pww TK - ToDo - update contents */
 /*
  * Contents
  *
@@ -45,16 +45,25 @@ html {
 
 .sidebar {
     font-family: "PT Sans", Helvetica, Arial, sans-serif;
-    /* font-size: .875rem; /* 15px */
     /* hack to fix the focus issue - see issue #39.*/
     z-index: 5;
     padding: 2rem 1rem;
-/* TK move color to theme, eventually */
-    color: rgba(255,255,255,.5);
+}
+
+.sidebar h1 {
+    font-weight: normal;
 }
 
 @media (min-width: 48em) {
   .sidebar {
+/*
+  Sticking these here for future vertical centering of the sidebar
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+  Will need to experiment to get this right, may need float
+  May also need to comment out next four lines
+*/
     position: fixed;
     top: 0;
     left: 0;
@@ -70,12 +79,7 @@ html {
 /* Sidebar links */
 .sidebar a {
     opacity 1.0;
-  color: #fff;
-}
-
-.sidebar p > a {
-    opacity 1.0;
-  color: #fff;
+    color: #fff;
 }
 
 /* Sidebar nav */
@@ -272,20 +276,6 @@ a.sidebar-nav-item:focus {
       background-color: #505050;
     }
 
-/* TK likely to delete
-    @media (min-width: 30.1em) {
-      .sidebar-toggle {
-	position: fixed;
-	width: 2.25rem;
-      }
-      .sidebar-toggle:before {
-	padding-bottom: .15rem;
-	border-top-width: .45rem;
-	border-bottom-width: .15rem;
-      }
-    }
-*/
-
     /* Slide effect
      *
      * Handle the sliding effects of the sidebar and content in one spot, seperate
@@ -458,7 +448,7 @@ a.sidebar-nav-item:focus {
 /* Green */
 .theme-base-0b .sidebar {
   background-color: #90a959;
-  color: white;
+  color: black;
 }
 /* pww 2014-12-17 - moved from poole.css to each theme */
 .theme-base-0b .page-title, .post-title,
@@ -472,7 +462,7 @@ a.sidebar-nav-item:focus {
 /* Cyan */
 .theme-base-0c .sidebar {
   background-color: #75b5aa;
-  color: white;
+  color: black;
 }
 /* pww 2014-12-17 - moved from poole.css to each theme */
 .theme-base-0c .page-title, .post-title,
@@ -486,7 +476,7 @@ a.sidebar-nav-item:focus {
 /* Blue */
 .theme-base-0d .sidebar {
   background-color: #6a9fb5;
-  color: white;
+  color: black;
 }
 /* pww 2014-12-17 - moved from poole.css to each theme */
 .theme-base-0d .page-title, .post-title,
@@ -501,7 +491,7 @@ a.sidebar-nav-item:focus {
 .theme-base-1d .sidebar {
 /* lesser blue in sidebar */
   background-color: #6699dd;
-  color: white;
+  color: black;
 }
 /* pww 2014-12-17 - moved from poole.css to each theme */
 .theme-base-1d .page-title, .post-title,
@@ -516,7 +506,7 @@ a.sidebar-nav-item:focus {
 /* Magenta */
 .theme-base-0e .sidebar {
   background-color: #aa759f;
-  color: white;
+  color: black;
 }
 /* pww 2014-12-17 - moved from poole.css to each theme */
 .theme-base-0e .page-title, .post-title,
@@ -530,7 +520,7 @@ a.sidebar-nav-item:focus {
 /* Brown */
 .theme-base-0f .sidebar {
   background-color: #8f5536;
-  color: white;
+  color: black;
 }
 /* pww 2014-12-17 - moved from poole.css to each theme */
 .theme-base-0f .page-title, .post-title,
