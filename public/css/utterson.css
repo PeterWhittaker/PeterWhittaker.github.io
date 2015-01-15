@@ -498,7 +498,8 @@ a.sidebar-nav-item:focus {
 }
 /* pww 2014-12-17 - moved from poole.css to each theme */
 .theme-base-1d .page-title, .post-title,
-.theme-base-1d h1, h2, h3, h4, h5, h6,
+h1, h3, h4, h5, h6,
+h2,
 .theme-base-1d .content a,
 .theme-base-1d .related h2, h3,
 .theme-base-1d .related-posts li a:hover {
