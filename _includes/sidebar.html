@@ -31,6 +31,8 @@
         {% endif %}
       {% endfor %}
 
+      <a class="sidebar-nav-item{% if page.url == node.url %} active{% endif %}" href="/atom.xml">RSS Feed (atom syndication)</a>
+
       {% comment %}
 	The custom var "version" is used in the download link for a complete ZIP of the web site.
 	I'm not using that right now and don't yet know how to set a version.
