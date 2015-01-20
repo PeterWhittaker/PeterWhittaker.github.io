@@ -32,7 +32,6 @@
         {% endif %}
       {% endfor %}
 
-      <a class="sidebar-nav-item{% if page.url == node.url %} active{% endif %}" href="/atom.xml">RSS Feed (atom syndication)</a>
 
       {% comment %}
 	The custom var "version" is used in the download link for a complete ZIP of the web site.
@@ -45,6 +44,7 @@
 	See previous comment.
       <span class="sidebar-nav-item">Currently v{{ site.version }}</span>
       {% endcomment %}
+      <a class="sidebar-nav-item{% if page.url == node.url %} active{% endif %}" href="http://feeds.feedburner.com/PeterWhittaker"><img src="http://feedburner.google.com/fb/images/pub/feed-icon16x16.png" alt="RSSicon" /> RSS Feed (atom syndication)</a>
     </nav>
 
     <p><small>&copy; {{ site.time | date: '%Y' }}. Unmodified code under its original license. Original code under <a href="https://www.mozilla.org/MPL/2.0/">MPL 2.0</a>. Modified code under the MPL if permitted, the original license otherwise. Blog posts  under <a href="http://creativecommons.org/licenses/by-nc-sa/2.5/ca/">CC-BY-NC-SA</a>. All other rights reserved. Contact me for more information and for other licensing alternatives.</small></p>
