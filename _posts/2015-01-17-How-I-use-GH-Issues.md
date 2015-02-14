@@ -11,6 +11,10 @@ tags:
 
 ---
 
+```
+Update summary, 2015-02-14: Working as described, with one additional milestone, Unsure. More towards the end.
+```
+
 A major reason for having this blog here and not elsewhere was to learn git and GitHub (cf the [Colophon](/colophon)). Part of that is using GitHub Issues to manage things. Over the last ten or so years, I've become a huge fan of issue-based development management, or, perhaps more accurately, ticket-based change management (which subsumes both changes to code, i.e., development, and changes to operational systems): Having tickets means being able to track what is being done, by whom, when, and by what date; a little more process adds support for change approval mechanisms, rollback, escalation, etc.
 
 It's more complicated than that, of course, but that's the basic idea. Pretty much from the beginning of my work on this site, I started tracking site features and development using [the issues associated with the site's repository](https://github.com/PeterWhittaker/PeterWhittaker.github.io/issues/) - but being a command line kinda person, first I found _an amazing, clean, simple, and effective, command line tool for opening, updating, closing, and otherwise managing GitHub Issues_, **[ghi](https://github.com/stephencelis/ghi)**. The install was pretty much a breeze:
@@ -81,3 +85,13 @@ Why Next[ABC] and not Next[A-F], e.g.? Well, anything more than three levels of 
 Or at least that's what I'm thinking right now. I don't want to overdesign nor do I want to overproscribe (though it does feel overdescribed by now, eh?).
 
 Enough for now. I'm going to start categorizing things. I'll report back on this after I've played with it for a bit.
+
+```
+Update, 2015-02-14
+
+I've been meaning to add this update for a while now: I proceeded as described above and found it worked pretty darned well. I get a nice view of how issues relate using ghi to list issues, labels, etc., at the command line, while the view in GitHub Issues is workable, at least for a small number of milestones.
+
+Important point: If you want to work this way, figure out what your milestones are first, then figure out the order in which you want to display them, then create them in that order: GitHub (or maybe it is just ghi) will assign each one a number, and, by default, present them in numerical order, even if the number is not displayed (it is in ghi, it is not in GitHub Issues, at least not as far as I can see).
+
+One change from the original post: As I began working with milestones as buckets for when things should happen, I realized I needed another bucket, Unsure, which is for things that aren't in the roadmap (and hence shouldn't be brought forward) but which should not yet be dismissed. Think of it as a "check again later" sort of holding pen. Fortunately, given that I thought of this bucket last (cf important point, above), it is fortunate that it should indeed appear last. Serendipity FTW.
+```
