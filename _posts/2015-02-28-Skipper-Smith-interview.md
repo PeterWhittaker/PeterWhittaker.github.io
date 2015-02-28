@@ -10,7 +10,7 @@ tags:
 
 ---
 
-<p class="lead">I got interviewed about our upcoming movie, [Skipper Smith](https://www.facebook.com/Skippersmithmovie). If you want to contribute, please visit our [IndieGogo campaign](https://www.indiegogo.com/projects/skipper-smith-and-the-really-important-thing)!</p>
+<p class="lead">I got interviewed about our upcoming movie, <a href="https://www.facebook.com/Skippersmithmovie">Skipper Smith</a>! If you want to contribute, please visit our <a href="https://www.indiegogo.com/projects/skipper-smith-and-the-really-important-thing">Indiegogo campaign</a>!</p>
 
 Q: Tell us a little about your acting background. What are some of the other films you have been in?
 
