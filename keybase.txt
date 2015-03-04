@@ -65,4 +65,77 @@ appending to this document.
 View my publicly-auditable identity here: https://keybase.io/peterwhittaker
 
 ==================================================================
+==================================================================
+https://keybase.io/peterwhittaker
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of http://peter-whittaker.com
+  * I am peterwhittaker (https://keybase.io/peterwhittaker) on keybase.
+  * I have a public key with fingerprint 5080 146B 585F 7AF2 CCD1  FCEF 0214 DC30 B9BA 7D83
+
+To do so, I am signing this object:
+
+{
+    "body": {
+        "key": {
+            "fingerprint": "5080146b585f7af2ccd1fcef0214dc30b9ba7d83",
+            "host": "keybase.io",
+            "key_id": "0214dc30b9ba7d83",
+            "kid": "0101cb5a1984702889b1160ad180449424785408fda61d1c3ab3282eb7bcbc36590f0a",
+            "uid": "058b088ef3ae3a1231c82bc8045e9719",
+            "username": "peterwhittaker"
+        },
+        "revoke": {
+            "sig_ids": [
+                "89537021783d0b114ed9821be7ea9fe2e9c3f52d8dab620b7c1cc986e8c5252b0f"
+            ]
+        },
+        "service": {
+            "hostname": "peter-whittaker.com",
+            "protocol": "http:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "ctime": 1425476614,
+    "expire_in": 157680000,
+    "prev": "f8ac3f1f15a884e6a6f03d401a29c530fb2774de241aba1380ac4b1fd1380133",
+    "seqno": 8,
+    "tag": "signature"
+}
+
+which yields the signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: Keybase OpenPGP v2.0.8
+Comment: https://keybase.io/crypto
+
+yMJjAnicbZJbbFRFGMe3LJRSBYQQCE/FgUgDBWfmzJwzZ41IfEEl7QOXFyxZ59o9
+lu5Zzp7dltQqVrQJJOobKA/lgYSQSGjCLcQCVgi3BoOhcomxQigBJZs0BFLEcJkD
+YnhgXmbmm//3+/7zzZyYnE7VVm3ruvDFnj9K6arBgd2l1KqxV6s7gQjVBpDpBK36
+6WSCfIuOClGQj0EGUMggIq6gjBqPGyylQkZqAzEiSjpQ+IJ7ijmgAeTCYpJhMYIX
+9eIgtDG7yQbKRl+ib312gCCSgnLkM+JBzJgvEHIhV4hBQnyCiccogcwo7iKFpMOF
+gxnWwhNSSMelPjSQW1zpGY4yARnTxuHa4Qg7SDIspGVR7XvIT4RFHeV5m7bqgo51
+1J4L4pi36gh0NYBIl8NWnfShGLRY60WQ+RAwnzrWG/KYo6C1R7TyGUZCe5r7RmPt
+S8dQrJjiwsVQeBJJ6TNXM0kxxQIasNaybd1yIJ/Ck1696GHR/yYWy7DNmixEYRzK
+cJ0V5OK4kEm8xRsKSUK7Ftn/UFkR5JV9L5tQ1lExCPMgg6xSxkHCRgRT4rkuIg1A
+dxSCSGeDREE9l0E7kjK6bJGGcXsDZBDljBHtctdARxGIOPYldaAR2POI0pggLjhy
+GOSSCGRUskRO8ppFvT4fggyzNnmLRdr25XlcijTo+vmn5vGpqtpU9YRxyY9L1U56
+7fk/rJQnPqyr7zlw/JVLO/4Z7M+uyfW/ke6s3njR0ZeWPTo8l31XaTa//oJOhbuu
+N9+kczZvZwfvdpSGr71b9dXw2k1Xeri6vqQuVFtmjaw7OXvmlIfduaF539TAE2Nv
+9925WTGLfr91/MLQ5q25A/Wfy71NneD8O+HQ6N+9y0enT7s6+uX2pX37vq95796y
+JZX972+kt+4eq5ypOTL3aGNT7t8o+nha48H+9dnLn91+IFYPjzwgdUXaM3HB1ys/
+eLSn8Ua5cerr6YEVcMbY/lmb2NbuTzuWym19u83CXve37jY4c839Hz4ZPL/wrR+P
+LR9p1/fiefm/Tp9smr/rzXRUSZ0b+GjnobO9p799POfPJ7T2TsY=
+=hG3p
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/peterwhittaker
+
+==================================================================
 

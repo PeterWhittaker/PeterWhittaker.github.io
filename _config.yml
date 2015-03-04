@@ -2,8 +2,6 @@
 # Without the markdown dependency, apostrophes, aka single quotes (') don't display properly in rendered pages.
 markdown:         redcarpet
 
-include:	.well-known
-
 # Permalinks
 permalink:        pretty
 relative_permalinks: true
