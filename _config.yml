@@ -1,10 +1,9 @@
 # Dependencies
 # Without the markdown dependency, apostrophes, aka single quotes (') don't display properly in rendered pages.
-markdown:         redcarpet
+markdown:         kramdown
 
 # Permalinks
 permalink:        pretty
-relative_permalinks: true
 
 # Setup
 title:            'Peter Whittaker'
@@ -16,7 +15,7 @@ paginate:         1
 baseurl:          /
 author:
   name:           'Peter Whittaker'
-  url:            https://twitter.com/EdgeKeep
+  url:            https://twitter.com/PeterAtTheEdge
 
 
 pages_list:       
