@@ -4,7 +4,6 @@ markdown:         redcarpet
 
 # Permalinks
 permalink:        pretty
-relative_permalinks: true
 
 # Setup
 title:            'Peter Whittaker'
