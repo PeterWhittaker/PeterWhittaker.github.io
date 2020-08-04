@@ -1,6 +1,6 @@
 # Dependencies
 # Without the markdown dependency, apostrophes, aka single quotes (') don't display properly in rendered pages.
-markdown:         redcarpet
+markdown:         kramdown
 
 # Permalinks
 permalink:        pretty
