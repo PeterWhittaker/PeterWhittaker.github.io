@@ -18,8 +18,7 @@ My favourite hobbies are off-roading, acting, and writing, from time to time. Yo
 
 For acting, check out
 
-* My [IMDB](http://www.imdb.com/name/nm3945839/) entry,
-* My [Kanata Theatre](http://kanatatheatre.com/Archive/actors/w/whittpet.htm) page, or
+* My [IMDB](http://www.imdb.com/name/nm3945839/) entry, or
 * Watch and listen to some of my work on [YouTube](http://www.youtube.com/playlist?list=PL5faqvscfwfocIuqoCFlb_Zn048YFGm4y).
 
 Summer weekends are spent driving over rocks. Check out the [EOTB photo gallery on Facebook](https://www.facebook.com/groups/EOTBOpenForum/photos/?filter=albums) for evidence.... Interested in joining us off-road? [I wrote a page about how to do that!](http://eotb.ca/how-to-join)
