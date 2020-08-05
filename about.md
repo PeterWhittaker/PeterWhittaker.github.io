@@ -1,6 +1,7 @@
 ---
 layout: page
 title: About
+permalink: /about/
 ---
 
 Professionally, I work with [Sphyrna Security Inc.](http://www.sphyrnasecurity.com) My main focus is business development, primarily for our Compliance Automation Platform, with the Unidirectional Gateway filling in my spare time.
