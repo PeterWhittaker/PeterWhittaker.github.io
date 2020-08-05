@@ -7,8 +7,8 @@ permalink:        pretty
 
 # Setup
 title:            'Peter Whittaker'
-tagline:          'Information security and identity management consultant, product manager, hacker, writer, actor.'
-description:      'Principal consultant with <a href="http://www.EdgeKeep.com">EdgeKeep</a>, occasional <a href="http://www.imdb.com/name/nm3945839/">film</a>, <a href="http://kanatatheatre.com/Archive/actors/w/whittpet.htm">theatre</a>, and <a href="https://www.youtube.com/watch?v=lDmBQORUCQM">commercial</a> actor, hacker, and writer. Learn more on the <a href="/about">About page</a>.'
+tagline:          'Father, off-roader, cyber security guy, hacker, actor, writer.'
+description:      'Director, Business Development, with <a href="http://www.SphyrnaSecurity.com">Sphyrna Security Inc.</a>, occasional <a href="http://www.imdb.com/name/nm3945839/">film</a>, <a href="http://kanatatheatre.com/Archive/actors/w/whittpet.htm">theatre</a>, and <a href="https://www.youtube.com/watch?v=lDmBQORUCQM">commercial</a> actor, hacker, and writer. Learn more on the <a href="/about">About page</a>.'
 url:              http://peter-whittaker.com
 shorturl:         peter-whittaker.com
 paginate:         1
@@ -16,7 +16,6 @@ baseurl:          /
 author:
   name:           'Peter Whittaker'
   url:            https://twitter.com/PeterAtTheEdge
-
 
 pages_list:       
   About: '/about'
