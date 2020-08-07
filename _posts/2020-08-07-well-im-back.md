@@ -14,7 +14,7 @@ tags:
 
 # Five years is a long time. Why stop? Why start again? And why was restarting so (technically) painful?
 
-<p class="lead">tl;dr It was 2014; I thought I should learn git and GitHub - didn't use it, just thought it would be cool. The blog was a practical exercise in both. I'm not sure why I kept it going (not that it went very long). Work changed. Life changed. Now I use git on work's self-hosted GitLab sometimes weekly, sometimes hourly: I needed to step up my git game. Looking up a very specific how-to dropped me into a four day rabbit hole....<p>
+<p class="lead">tl;dr It was 2014; I thought I should learn git and GitHub - didn't use it, just thought it would be cool. The blog was a practical exercise in both. I'm not sure why I kept it going (not that it went very long). Work changed. Life changed. Now I use git on work's self-hosted GitLab sometimes weekly, sometimes hourly: I needed to step up my git game. Looking up a very specific how-to dropped me into a four day rabbit hole....</p>
 
 For most of the last 20 years, I've been a consultant. Work inputs were meetings, site inspections, emails, phone calls, interviews both formal and informal, and reams of policy and procedure documents. Deliverables were documents and presentations and emails. Mostly.
 
@@ -26,7 +26,7 @@ Fast forward to earlier this year: A consulting gig has me coding. February and 
 
 That coding involved git. Just basic stuff, trying to get my head around git pull, git add, git commit, and git push. Branches were a step too far, as was using SSH.
 
-That was then (has it really only been five months?). That consulting gig morphed into full-time employment, the first time I have been an employee since 2001 (2013-2014 kind-of/sort-of had employment, but not really, that was a strange period... ...maybe one day I'll share an askari story (there's a pun there; I quite like it; grokking it requires knowing the story; maybe one day; I digress...).
+That was then (has it really only been five months?). That consulting gig morphed into full-time employment, the first time I have been an employee since 2001 (2013-2014 kind-of/sort-of had employment, but not really, that was a strange period... ...maybe one day I'll share an askari story (there's a pun there; I quite like it; grokking it requires knowing the story; maybe one day; I digress...)).
 
 That [full time job](https://www.sphyrnasecurity.com) is a mix of marketing, marketing management (mostly product/roadmap), client liaison, prospect management, business development, and hands-on. Instead of writing this, I should probably be working on the compliance platform User Acceptance Plan for one customer; or SELinux linear channel controls for two customers; or the cloud-based compliance platform demonstrator; or a few other things... (I've got GitLab issues aplenty assigned to me...).
 
@@ -50,7 +50,7 @@ There were a few basic issues:
  * GitHub pages had stopped supporting
    * relative links
    * the markdown engine I'd been using
-   * URL specifications such as {{ site.baseurl }}
+   * URL specifications such as `{% raw %}{{ site.baseurl }}{% endraw %}`
  * The IP addresses for custom domains had changed
 
 The last of those generated build warnings; the first few build failures. I'm not a Ruby guy, so it took a while to find everything and figure things out... ...but I couldn't even start figuring things out until I updated my Mac OS development environment... ...which I didn't realize I had to do for a while.
@@ -86,7 +86,6 @@ Most notably, I could neither figure out nor remember what this `bundle` thing w
 ## Another digression - keeping a Mac OS development environment up-to-date
 
 I'd installed brew and a few other things in 2014 as part of getting the blog going in the first place. Sometime after that, for reasons lost in the mists of time, I installed node. Later, doing advisory and content development for [ClickArmor](https://www.clickarmor.com), Node was a great engine for testing some JS code I was hacking about. After a few false starts, I wrote a script to simplify my life:
-
 ```
 $ cat ~/bin/update
 #!/bin/bash
@@ -100,7 +99,6 @@ node -v
 npm -v
 $
 ```
-
 It's basically an encapsulation of just-in-time reseach I knew I was likely to forget: Run the brew update and upgrade commands, let me decide whether or not to update node, which can take a while, run the necessary npm-check and node commands....
 
 So far, so good.
@@ -108,7 +106,6 @@ So far, so good.
 ## We will now pause the second digression
 
 In puzzling out restarting blog management, I realized I needed a few gems - and that my gems were out of date. My first thought was to update my script...
-
 ```
 ...
 brew update
@@ -117,16 +114,12 @@ gem update
 read -p "Ready to continue with npm and node (ctrl-c to skip)? " answer
 ...
 ```
-
 This didn't work. At least not well. I kept getting this error:
-
 ```
 ERROR:  While executing gem ... (Gem::FilePermissionError)
     You don't have write permissions for the /Library/Ruby/Gems/2.6.0 directory.
 ```
-
 More Googling revealed little/nothing of value, so I naively tried:
-
 ```
 ...
 brew update
@@ -135,10 +128,11 @@ gem update || sudo gem update
 read -p "Ready to continue with npm and node (ctrl-c to skip)? " answer
 ...
 ```
-
 Yay! No more errors! Great, right?!?!
 
 Yeah, no, not so much.
+
+I didn't have any errors, but the site still wasn't building.
 
 I was lost, so I did what I probably should have done to begin with: careful inspection of all update/upgrade messages, wherein I noticed various brew indications about things being installed *cask-only*.
 
@@ -149,14 +143,15 @@ More puzzling. Finally, **EUREKA!**
 I needed to
 
 1. Install Ruby via brew
-2. Update my bash environment so that brew versions of various things appeared first
+2. Update my bash environment so that brew versions of various things appeared first in various paths
+
+In other words, I was using the Mac OS versions of `gem`, etc., which are older, and wasn't picking up `bundle`, et al, at all.
 
 Step the first was easy enough. Step the second got me looking through my `.bashrc`....
 
 ## Merging digressions the first and second
 
 I wanted to manage my bash environment conservatively, only adding to it things that made sense on the machine in question. I'd made a start at that some time ago:
-
 ```
 ...
 function isMacOS {
@@ -200,10 +195,9 @@ case $OSTYPE in
 esac
 
 ```
-
 Nothing terribly complicated, a few utility functions to help manage conditional inclusion of environment variables, paths, etc., based on platform.
 
-Among other things, The `isMacOS` function appeared in that commented-out block of settings related to ICU4C, et al, mentioned above.
+Among other things, the `isMacOS` function appeared in that commented-out block of settings related to ICU4C, et al, mentioned above.
 
 **Lightbulb flash**
 
@@ -214,7 +208,6 @@ Progress.
 Did I enable all that code? No. I was tempted to. But conservative in code application, remember? I realized I wanted it to be conditional, based at least on whether or not various components were present.
 
 This is what replaced the commented-out code (the path-bit bookends are included for completeness):
-
 ```
 if [ -z "${PATH}" ]; then
     # there should be a default path, but in some weird cases, perhaps not
@@ -257,7 +250,6 @@ fi
 checkFor PATH ~/bin
 
 ```
-
 The interesting bits:
 
 1. Set a reasonable default PATH, if PATH is unset
@@ -267,7 +259,6 @@ The interesting bits:
 This works really, really well.
 
 But what's this `checkfor` thing? I'm really pleased with this:
-
 ```
 checkFor () {
     path="$1"
@@ -303,7 +294,6 @@ checkFor () {
     esac
 }
 ```
-
 Fairly simple logic:
 
 1. Check for the right number of arguments (two):
@@ -314,7 +304,7 @@ Fairly simple logic:
         * That name wasn't quoted when passed to checkFor
 2. If the folder "want" doesn't exist, do nothing (e.g., on a Mac where I don't run brew)
 3. If the folder is already in whatever "path" it is, do nothing
-    * `isInPath is explained below
+    * `isInPath` is explained below
 4. If
     1. all arguments are correct,
     2. "want" exists, and
@@ -322,7 +312,6 @@ Fairly simple logic:
     add it to the appropriate path, with appropriate separation and prefix, if any
 
 `checkFor` relies on:
-
 ```
 isInPath () {
     path="$1"
@@ -350,9 +339,10 @@ isInPath () {
     fi
 }
 ```
+Again, fairly simple logic:
 
 1. Check arguments
-2. Return false if "path" is empty - if it's empty, we need to add to it
+2. Return false if "path" is empty - if it's empty, we need to create it, which we do by assigning to in `checkFor`
     * Note the use of `${!path}` to cause "$path" to be replaced with the contents of whatever variable it represents, e.g., if $path==PATH, ${!path}==$PATH
 3. Replace any `~` in "want" with the contents of `$HOME`, to simplify matching
 4. Return
@@ -362,7 +352,6 @@ isInPath () {
 `checkFor` updates "path" only if `isInPath` returns false.
 
 With that in place, I could update `~/bin/update` (remember that?). Long story short, it is now:
-
 ```
 #!/bin/bash
 
@@ -378,16 +367,13 @@ npm-check -u
 node -v
 npm -v
 ```
-
 Notice that `sudo` isn't there anymore: with various environment variables set correctly, all of the updates take place in *the right place*, regardless of whether that's system-wide or keg-only: Whatever commands I run pick up the correct environment and do this right thing. Notably,
-
 ```
 $ which gem
 /usr/local/opt/ruby/bin/gem
 $ which bundle
 /usr/local/opt/ruby/bin/bundle
 ```
-
 But these depend a on few more things we need to cover....
 
 ## You have reached the end of the first and second digressions
@@ -398,12 +384,11 @@ Somewhere along the line, I realized or remembered that building the site on my 
 bundle install
 bundle exec jekyll serve
 ```
-
 Long story short, `bundle install` reads `Gemfile`, installs whatever is needed, and creates `Gemfile.lock` with the current list of dependencies. But I was still getting build errors whenever I did `git push githubio`.
 
 Again, long story short, I realized a few things:
 
-1. When resurrecting a six-year-old site, it's better not have a `Gemfile.lock`, as it might confuse `bundle`, and
+1. When resurrecting a six-year-old site, it's better not to have a `Gemfile.lock`, as it might confuse `bundle`, and
 2. I was going to forget this.
 
 ## Enter the Makefile
@@ -413,9 +398,7 @@ I love `make`. I really miss the O'Reilly `make` book I lent to someone who quit
 ```
 make
 ```
-
 doesn't save a lot of keystrokes, but
-
 ```
 $ cat Makefile
 all:
@@ -427,6 +410,8 @@ clean:
 ```
 
 reminds me that `make` actually means `bundle install; bundle exec jekyll serve`, which means *run `bundle install`* to update everything then *run `bundle exec jekyll serve`* to launch Jekyll as a server so that I can find out a) if local builds succeed and b) if I like the look of the local version of the blog.
+
+It also reminds me that running `make clean` can help resolve odd errors by removing `Gemfile.lock` and letting `bundle install` rebuild all dependencies.
 
 If all goes well, I can then `git push` to GitHub and the site will be updated for the world to see.
 
@@ -452,7 +437,6 @@ set mouse=nvh
 highlight Comment ctermfg=DarkGrey guifg=DarkGrey cterm=underline
 
 *autocmd FileType make set noexpandtab shiftwidth=8 softtabstop=0*
-
 ```
 
 The last line is key: If editing any kind of `Makefile`, change back to
@@ -491,7 +475,9 @@ $ xcode-select -p
 
 This should return `/Library/Developer/CommandLineTools`; if it does, you are probably OK. Move onto installing Ruby via brew (but keep an eye out for odd failures in later commands).
 
-If `xcode-select` doesn't exit, check your `$PATH` and, if necessary, install XCode from the Mac OS App Store. If it runs but doesn't return `/Library/Developer/CommandLineTools`, then run
+If `xcode-select` doesn't exit, check your `$PATH` and, if necessary, install XCode from the Mac OS App Store. 
+
+If it runs but doesn't return `/Library/Developer/CommandLineTools`, then run
 
 ```
 $ xcode-select --install
@@ -499,12 +485,12 @@ $ xcode-select --install
 
 When that completes, run `xcode-select -p` again.
 
-If the command returns `/Library/Developer/CommandLineTools` you are probably OK. But. One can run into problems anyway. If the subsequent steps above fail with odd errors, try the following
-
+If the command returns `/Library/Developer/CommandLineTools` you are probably OK. But. One can run into problems anyway. If the subsequent site building steps fail with odd errors, try the following
+```
 $ sudo rm -rf /Library/Developer/CommandLineTools
 $ xcode-select --install
 $ xcode-select -p
-
+```
 If this doesn't a) result in `/Library/Developer/CommandLineTools` and/or b) doesn't solve weird problems, I don't know what other steps to take.
 
 ### Command-line précis
@@ -546,7 +532,7 @@ Yeah, that was my last few days. Every time I ran `git push remote`, I would get
 
 Fixing the first two was easy, the Mac OS update procedure described above and a quick change to `_config.yml`, respectively. 
 
-The next two required searching for all included files, e.g., CSS being pulled in via `_includes/head.html`, and, more confusingly, removing all references to `{{ site.url }}`, `{{ site.baseurl }}`, etc., in all files, then removing them - I literally just deleted them and GitHub Pages figured things out pretty well.
+The next two required searching for all included files, e.g., CSS being pulled in via `_includes/head.html`, and, more confusingly, removing all references to `{% raw %}{{ site.url }}{% endraw %}`, `{% raw %}{{ site.baseurl }}{% endraw %}`, etc., in all files, then removing them - I literally just deleted them and GitHub Pages figured things out pretty well.
 
 The command
 
@@ -554,11 +540,19 @@ The command
 $ find . -path ./_site -prune -o -type f -exec grep -i -H -e 'site.url' -e 'site.baseurl' {} \;
 ```
 
-was very useful for this; the grep clause can be extended as necessary with additional '-e <pattern>' commands to find other offenders.
+was very useful for this; the grep clause can be extended as necessary with additional '-e <pattern>' commands to find other offenders. The rest of the command is basic `find`:
 
-I figured this out after carefully reading [a GitHub Community post](https://github.community/t/css-not-being-applied-in-pages/10466/10) that I'm not even sure how I found. Careful and determined and persistent Googling, I expect.
+ * `-path ./_site -prune` causes `find` to ignore the `_site` subfolder
+ * `-type f -exec...` tells `find` to apply `grep` only to files, and not to folders
+ * `grep -i -H -e...` tells `grep` to
+   * Ignore case when searching (just in case),
+   * Output the name of any matching file (since it is being passed one file at a time, the default is to not output the file name, which means `grep` prints matches but not where it found them, unless you specify `-H`, which forces it to output the file name)
+   * Match multiple `-e` patterns against the same file
+ * `-o` tells `find` to apply either the path-ignore logic or the grep-in-files logic
 
-The last one required updating my custom domain's DNS with the correct IP addresses for GitHub Pages; [this is pretty well described here](https://docs.github.com/en/github/working-with-github-pages/managing-a-custom-domain-for-your-github-pages-site).
+I figured the relative-path-thing out after carefully reading [a GitHub Community post](https://github.community/t/css-not-being-applied-in-pages/10466/10) that I'm not even sure how I found. Careful and determined and persistent Googling, I expect.
+
+The last fix required updating my custom domain's DNS with the correct IP addresses for GitHub Pages; [this is pretty well described here](https://docs.github.com/en/github/working-with-github-pages/managing-a-custom-domain-for-your-github-pages-site).
 
 Really, the bulk of the work was the elimination of relative links.
 
@@ -570,9 +564,9 @@ Yes. While it was frustrating to figure all of this out,
 
  * I'm confident that my Mac development environments are correctly configured
  * I got a lot of practical git experience in a very short time, enough to start locking in things like
-   * git pull
-   * git push remote
-   * git stash (I used this a lot when cycling through some potential fixes)
+   * `git pull`
+   * `git push remote`
+   * `git stash` (I used this a lot when cycling through some potential fixes)
 
 Most notably, I've started to lock in the procedure for publishing new posts, which is excellent practical git:
 
@@ -590,13 +584,15 @@ It was lot more pleasant and a lot more harmless figuring this out on a site tha
 
 I feel a lot more confident that I will mostly use git correctly now. That's a big win. And writing this up solified a lot of points in my head, another win.
 
+(Heck, I even figured out to write Jekyll posts about Jekyll, so that they include `{% raw %}{% raw %}{% endraw %}`, for example!)
+
 Time to get back to work, I guess....
 
 # OK, what about stopping six years ago? And all the foreshadowing?
 
 Long story short, six years ago, if it wasn't work-related, I really didn't have time for it. It was, uh, unpopular, to devote leisure time to anything at the keyboard when there were *couply* things to do - even if they were of asymmetric interest, if you will.
 
-We separated in 2017, with the divorce finalized in 2018. Still neither a lot of leisure time nor interest in picking this back up, too many other things to do. Like working my butt off to save for a down-payment on a place of my home and get out of the post-split rental.
+We separated in 2017, with the divorce finalized in 2018. Still neither a lot of leisure time nor interest in picking this back up, too many other things to do. Like working my butt off to save for a down-payment on a place of my own and get out of the post-split rental.
 
 Last year, my girlfriend and I moved into my new place, and much time was spent on things house-related and new relationship-related.
 
@@ -609,6 +605,8 @@ Nah. I have to
 * Fix the `atom.xml` problem described above
 * Make sure a few other things about the site are working as they should (once I figure out or remind myself what *should* is in this case
 * Update all my issues ([cf my post on how I was using `ghi` and GitHub issues back then](/How-I-use-GitHub-Issues)
+* Remove specific product versions from my `.bashrc`, making it more dynamic and robust
+* Add a `push` rule to the site `Makefile`
 * And probably a few other things, too.
 
 OK, back to work for real.
