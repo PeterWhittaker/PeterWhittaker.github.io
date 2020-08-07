@@ -12,11 +12,14 @@ tags:
 
 ---
 
-# Five years is a long time. Why stop? Why start again? And why was restarting so (technically) painful?
+## Five years is a long time. Why stop? Why start again? And why was restarting so (technically) painful?
 
 <p class="lead">tl;dr It was 2014; I thought I should learn git and GitHub - didn't use it, just thought it would be cool. The blog was a practical exercise in both. I'm not sure why I kept it going (not that it went very long). Work changed. Life changed. Now I use git on work's self-hosted GitLab sometimes weekly, sometimes hourly: I needed to step up my git game. Looking up a very specific how-to dropped me into a four day rabbit hole....</p>
 
+<p class="lead">Also tl;dr In this <strong>very long</strong> post, you'll learn (at least part of) how to maintain a Jekyll-based GitHub Pages blog under Mac OS. There is an awful long in here, take your time.... :-></p>
 For most of the last 20 years, I've been a consultant. Work inputs were meetings, site inspections, emails, phone calls, interviews both formal and informal, and reams of policy and procedure documents. Deliverables were documents and presentations and emails. Mostly.
+
+## The backstory - getting started, back then, and stopping, and starting again....
 
 2014 began the same way, but looked to become more technical. I'd been curious about git for some time, but had neither work need nor leisure time (foreshadowing: life changes) to make any effort. With the 2014 work becoming more technical, that looked to change. I'd also *always meant* to start a blog, so, brace of birds, single rock, and all that. Yay, the blog was born. There was much rejoicing.
 
@@ -611,3 +614,12 @@ Nah. I have to
 
 OK, back to work for real.
 
+# A final note
+
+When getting your Mac OS environment configured correctly, it's worth using
+```
+CMD T
+```
+every now and again to open a new tab: This will launch a fresh instance of `bash` and source your `.bashrc`, updating your environment to reflect any recent changes, e.g., as a result of `brew install ruby` or `bundle install`. While writing this post, I had `make` fail because `bundle` was missing key environment variables: I'm writing this on my Mini and I had done most of the debugging work on my Air; my environment only had `CPPFLAGS` half-right, so `make` failed.
+
+`CMD T`, new instance of the shell, rerun `make`, success.
