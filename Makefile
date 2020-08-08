@@ -4,7 +4,7 @@ build:
 	@bundle install
 
 serve:
-	@bundle exec jekyll serve
+	@bundle exec jekyll serve -o
 
 clean:
 	@rm Gemfile.lock
