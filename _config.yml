@@ -27,3 +27,4 @@ pages_list:
 # Custom vars
 github:
   repo:           https://github.com/PeterWhittaker/PeterWhittaker.github.io
+  gist:           https://gist.github.com/PeterWhittaker
