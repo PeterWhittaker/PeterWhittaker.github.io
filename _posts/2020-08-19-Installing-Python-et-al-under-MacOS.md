@@ -41,9 +41,9 @@ Before we go any further, I should note that whatever you do
 with brew - or with gem, if you get there - do NOT override
 system defaults - Mac OS and many utilities produced for the
 Mac depend upon them. Let brew manage things and install them
-cask-only. You then need to find them via appropriate manipulation
-of PATH, CPPFLAGS, LDFLAGS, etc. Cf my dot file project for
-one way of doing this.
+cellar-only. You then need to find them via appropriate
+manipulation of PATH, CPPFLAGS, LDFLAGS, etc. Cf my dot file
+project for one way of doing this.
 ```
 
 At any rate, none of those pages provide the complete answer. You know that you need
