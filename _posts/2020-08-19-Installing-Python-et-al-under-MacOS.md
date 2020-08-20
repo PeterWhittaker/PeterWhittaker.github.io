@@ -12,6 +12,8 @@ tags:
  - bootstrap
 ---
 
+tl;dr? [Jump right to the recipe](#just-the-recipe)
+
 For reasons lost in the mists of time, I've been a Mac guy since 2013 - but I've been a command line (CLI) guy since 1990 (or earlier, hard to remember), and still am. A few years ago, I discovered [brew, aka homebrew](https://brew.sh) after finding out how out-of-date were so many of the standard UNIX/Linux tools included with Mac OS, e.g., bash.
 
 Generalizing, the hardest part of working with the CLI on a Mac is having the same experience on all the platforms I use, which range from Windows 10 with WSL (some flavour of Ubuntu, cannot remember which), RHEL 7.6, Fedora 32, Mac OS 10.15, and Cygwin - and that problem persists across those other platforms, which is why [I created a GitHub project to keep my dot files in snc](https://github.com/PeterWhittaker/myDotFiles).
@@ -62,8 +64,9 @@ UGH.
 
 I don't know that what follows is a universally-accepted approach, but it is the shortest and cleanest path to where I needed to go (as verified by running `make clean; make` in my `yamale` top-level folder and having all `tox` tests work out-of-the-box with both Python `3.6` and `3.8`, no modifications to `yamale` files required...).
 
-So, [YMMV](http://onlineslangdictionary.com/meaning-definition-of/ymmv) and [FWIW](http://onlineslangdictionary.com/meaning-definition-of/fwiw), here is my shortest-possible recipe:
+So, [YMMV](http://onlineslangdictionary.com/meaning-definition-of/ymmv) and [FWIW](http://onlineslangdictionary.com/meaning-definition-of/fwiw), here is....
 
+### Just The Recipe
 ```
 # install brew
 $ /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
