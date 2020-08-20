@@ -101,7 +101,7 @@ In my case, the latter command shows
 3.6.11 (set by /Users/pww/pipelineWork/yamale/.python-version)
 3.8.5 (set by /Users/pww/pipelineWork/yamale/.python-version)
 ```
-pyenv which shows me what I expected:
+`pyenv which` shows me what I expected:
 ```
 $ pyenv which python3.6
 /Users/pww/.pyenv/versions/3.6.11/bin/python3.6
