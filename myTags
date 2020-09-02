@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+awk -F- '/tags/{getline; while ($0 ~ /^ *-/) {print $2; getline}}' _posts/*md |sort -u
