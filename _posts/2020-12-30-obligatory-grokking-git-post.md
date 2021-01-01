@@ -227,6 +227,7 @@ One big step (at least for me) on the road to git clarity....
 
 This article and the perspective behind it owe a great deal to the following. I especially need to reread the second one a few more times....
 
-The thoroughly enjoyable [Think Like (a) Git](http://think-like-a-git.net)  
-A thoroughly underrated [stackoverflow answer](https://stackoverflow.com/a/61575566)
+* The thoroughly enjoyable [Think Like (a) Git](http://think-like-a-git.net)
+    * The [resources section](http://think-like-a-git.net/resources.html) is especially good. Some of my favourites are [Scott Chacon's *Git Internals*](https://github.com/pluralsight/git-internals-pdf) and [Ryan Tomayko's *The Thing About Git*](https://tomayko.com/blog/2008/the-thing-about-git) - I particularly like Ryan's take on`git add --patch`and how`git add`is, in general, a command for manipulating the`index,`aka`staging,`aka, the`cache.`
+* A thoroughly underrated [stackoverflow answer](https://stackoverflow.com/a/61575566)
 
