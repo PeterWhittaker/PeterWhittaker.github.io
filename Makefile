@@ -1,6 +1,7 @@
 all: build serve
 
 build:
+	@bundle config set force_ruby_platform true
 	@bundle install
 
 serve:
