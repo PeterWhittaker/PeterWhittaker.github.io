@@ -8,7 +8,7 @@ serve:
 	@bundle exec jekyll serve -o
 
 clean:
-	@rm Gemfile.lock
+	@rm -f Gemfile.lock
 
 doctor:
 	@bundle exec jekyll doctor
