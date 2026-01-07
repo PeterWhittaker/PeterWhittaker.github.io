@@ -3,12 +3,10 @@ layout: page
 title: About
 ---
 
-Professionally, I work with [Sphyrna Security Inc.](http://www.sphyrnasecurity.com) My main focus is business development, primarily for our Compliance Automation Platform, with the Unidirectional Gateway filling in my spare time.
+Professionally, I work with [Sphyrna Security Inc.](http://www.sphyrnasecurity.com) My main focus is our Next Generation Cross Domain (NGXS) product line, especially our Unidirectional Gateways.
 
 Socially, you can find me on
 
-* [Facebook](http://www.facebook.com/PeterWhittaker),
-* [Twitter](http://twitter.com/EdgeKeep),
 * [LinkedIn](http://www.linkedin.com/in/PeterWhittaker),
 * [/.](http://slashdot.org/~myvirtualid/), 
 * [Hacker News](https://news.ycombinator.com/user?id=PeterWhittaker), and
@@ -24,4 +22,3 @@ For acting, check out
 Summer weekends are spent driving over rocks. Check out the [EOTB photo gallery on Facebook](https://www.facebook.com/groups/EOTBOpenForum/photos/?filter=albums) for evidence.... Interested in joining us off-road? [I wrote a page about how to do that!](http://eotb.ca/how-to-join)
 
 Occasionally I play stringed instruments of various types, with picks or bows (definitely prefer the ones with bows). Relieved you should be that evidence of that spared you I have.
-
