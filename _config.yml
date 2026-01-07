@@ -9,7 +9,7 @@ permalink:        pretty
 # Setup
 title:            'Peter Whittaker'
 tagline:          'Father, off-roader, cyber security guy, hacker, actor, writer.'
-description:      'Director, Business Development, with <a href="http://www.SphyrnaSecurity.com">Sphyrna Security Inc.</a>, occasional <a href="http://www.imdb.com/name/nm3945839/">film</a>, theatre, and <a href="https://www.youtube.com/watch?v=lDmBQORUCQM">commercial</a> actor, hacker, and writer. Learn more on the <a href="/about">About page</a>.'
+description:      'Director, Special Projects, with <a href="http://www.SphyrnaSecurity.com">Sphyrna Security Inc.</a>, occasional <a href="http://www.imdb.com/name/nm3945839/">film</a>, theatre, and <a href="https://www.youtube.com/watch?v=lDmBQORUCQM">commercial</a> actor, hacker, and writer. Learn more on the <a href="/about">About page</a>.'
 url:              http://peter-whittaker.com
 shorturl:         peter-whittaker.com
 paginate:         1
@@ -22,7 +22,7 @@ pages_list:
   About: '/about'
   Archive: '/archive'
   Colophon: '/colophon'
-  Feed: '/atom.xml'
+#  Feed: '/atom.xml'
 
 # Custom vars
 github:
