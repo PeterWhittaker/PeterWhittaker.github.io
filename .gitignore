@@ -39,6 +39,7 @@ validation-report.json
 
 # Folders to ignore
 node_modules
+.bundle
 
 # 2015-10-05 pww added .wips to be ignored
 .wips
